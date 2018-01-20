@@ -1,0 +1,26 @@
+<!--ng-app – This is used to initialize an Angular.JS application. When this directive in placed in an HTML page, it basically tells Angular that this HTML page is an angular.js application.-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            background-color: aqua
+        }
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <title>ng-init</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    </head>
+    <body ng-app="">
+        <div>
+            <h1><center>Use of ng-init</center></h1>
+            <p>This is used to initialize application data. Sometimes you may require some local data for your application, this can be done with the ng-init directive.</p>
+        </div>
+        <hr/>
+        <hr/>
+        <div  ng-init="myText='Hello World!'"> <!--Use of ng-init-->
+            {{myText}}
+        </div>
+    </body>
+</html>

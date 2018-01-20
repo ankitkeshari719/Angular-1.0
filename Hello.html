@@ -2,7 +2,12 @@
 
 <!DOCTYPE html>  
 <html lang="en">  
-<head>  
+<head>
+    <style>
+        body{
+            background-color: aqua
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
     <script>
         angular.module("app", [])
@@ -12,12 +17,13 @@
             } );
     </script>
 </head>  
-<body ng-app="app" style="background-color: aqua">
+<body ng-app="app">
     <div>
         <h1><center>Simple Hello Angular-JS App</center></h1>
     </div>
     <hr/>
     <hr/>
+    <!-- view part-->
     <div ng-controller="HelloController" >
         <h2>{{hello.title}} !</h2>
     </div>

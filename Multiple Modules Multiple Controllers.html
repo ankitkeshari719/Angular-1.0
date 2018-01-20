@@ -7,6 +7,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+        </style>
         <meta charset="UTF-8">
         <title>Multiple Modules Multiple Controller</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
@@ -27,7 +32,7 @@
             $scope.hi.title = "Hi, AngularJS";
         });
     </script>
-    <body ng-app = "app" style="background-color: aqua">
+    <body ng-app = "app">
     <div>
         <h1><center>Multiple Modules Multiple Controllers</center></h1>
         <p>Modules are used to group related pieces of functionality together to make it easy to take that and re-use it in another application.</p>
@@ -35,6 +40,7 @@
     </div>
     <hr/>
     <hr/>
+       <!-- view part-->
         <div ng-controller = "HelloController">
             <h1>{{helloTo.title}}</h1>
         </div>
