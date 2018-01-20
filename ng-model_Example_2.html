@@ -1,0 +1,47 @@
+<!--ng-model – It is used to bind the value of an HTML control to application data.-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script>
+            //Angular Code <Controller part>
+            var app = angular.module('app',[]);
+            app.controller('TotalPriceController',function ($scope) {
+                $scope.price = 40;
+                $scope.quantity = 0;
+            });
+        </script>
+    </head>
+    <body ng-app = 'app'>
+        <div>
+            <h1><center>Use of ng-model</center></h1>
+            <p>It is used to bind the value of an HTML control to application data.</p>
+        </div>
+        <hr/>
+        <hr/>
+        <!-- view part-->
+        <div ng-controller = "TotalPriceController">
+            <table>
+                <tr>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total price</th>
+                </tr>
+                <tr>
+                    <td>{{price}}</td>
+                    <td><input type="text" ng-model="quantity"></td>
+                    <td>{{price * quantity}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
