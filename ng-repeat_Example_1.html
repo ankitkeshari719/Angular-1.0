@@ -1,0 +1,43 @@
+<!--ng-repeat – This is used to repeat an HTML element.-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script>
+            //Angular Code <Controller part>
+            var app = angular.module('app',[]);
+            app.controller('ListController',function ($scope) {
+                $scope.lists = ['HTML','CSS','Bootstrap','JavaScript','Angular JS'];
+            });
+        </script>
+    </head>
+    <body ng-app = 'app'>
+        <div>
+            <h1><center>Use of ng-repeat</center></h1>
+            <p>This is used to repeat an HTML element</p>
+        </div>
+        <hr/>
+        <hr/>
+        <div ng-controller="ListController">
+            <!-- view part-->
+            <p><b>Display ng-repeat with table rows.</b></p>
+            <table>
+                <tr ng-repeat="list in lists">
+                    <td>{{ list }}</td>
+                </tr>
+            </table>
+            <p><b>Display ng-repeat with unordered list.</b></p>
+            <ul>
+                <li ng-repeat="list in lists">{{list}}</li>
+            </ul>
+        </div>
+    </body>
+</html>
