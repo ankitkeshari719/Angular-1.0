@@ -1,0 +1,39 @@
+<!--Multiple Modules Multiple Controllers.-->
+
+<!--Modules are used to group related pieces of functionality together to make it easy to take that and re-use it in another application-->
+
+<!--If for some reason you want to have controllers in separate modules, you can do that, and include those modules as dependencies of your main module:-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Multiple Modules Multiple Controller</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    </head>
+    <script>
+        var hello = angular.module('hello', []); // First Module
+        var hi = angular.module('hi',[]); // Second Module
+        var app = angular.module('app',['hello','hi']); // Include above modules in your main Module
+        hello.controller('HelloController', function ($scope) {
+            //Controller Code Here
+            $scope.helloTo = {};
+            $scope.helloTo.title = "Hello, AngularJS";
+        });
+
+        hi.controller('HiController', function ($scope) {
+            //Controller Code Here
+            $scope.hi = {};
+            $scope.hi.title = "Hi, AngularJS";
+        });
+    </script>
+    <body ng-app = "app">
+        <div ng-controller = "HelloController">
+            <h1>{{helloTo.title}}</h1>
+        </div>
+        <hr/>
+        <div ng-controller = "HiController">
+            <h1>{{hi.title}}</h1>
+        </div>
+    </body>
+</html>

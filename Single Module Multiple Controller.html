@@ -1,4 +1,8 @@
-<!--Single Module Multiple Controller.-->
+<!--Single Module Multiple Controllers.-->
+
+<!--Modules are used to group related pieces of functionality together to make it easy to take that and re-use it in another application-->
+
+<!--You can have multiple controllers, but you cannot have multiple ng-app directives on the same page. This means you should only have a single ng-app directive in your html that points to a single module that will be used in your application-->
 
 <!DOCTYPE html>  
 <html>
@@ -6,27 +10,26 @@
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>  
 	</head>
 	<script>  
-		var app = angular.module('myapp', []);
-		app.controller('TextController', function ($scope) {
+		var app = angular.module('app', []);
+		app.controller('HelloController', function ($scope) {
 			//Controller Code Here   
 			$scope.helloTo = {};  
-			$scope.helloTo.title = "World, AngularJS";  
+			$scope.helloTo.title = "Hello, AngularJS";
 		});
 
-		app.controller('WorldController', function ($scope) {
+		app.controller('HiController', function ($scope) {
 			//Controller Code Here
-			$scope.helloTo = {};  
-			$scope.helloTo.title = "World, AngularJS";  
+			$scope.hi = {};
+			$scope.hi.title = "Hi, AngularJS";
 		});
 		
 	</script>  
-	<body ng-app = "myapp">
-		<div ng-controller = "TextController">
+	<body ng-app = "app">
+		<div ng-controller = "HelloController">
 			<h1>{{helloTo.title}}</h1>
 		</div>
-		<div ng-controller = "WorldController">
-			<h1>{{helloTo.title}}</h1>
+		<div ng-controller = "HiController">
+			<h1>{{hi.title}}</h1>
 		</div>
 	</body>
-	
 </html>
