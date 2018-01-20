@@ -1,0 +1,32 @@
+<!--Single Module Multiple Controller.-->
+
+<!DOCTYPE html>  
+<html>
+	<head>
+		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>  
+	</head>
+	<script>  
+		var app = angular.module('myapp', []);
+		app.controller('TextController', function ($scope) {
+			//Controller Code Here   
+			$scope.helloTo = {};  
+			$scope.helloTo.title = "World, AngularJS";  
+		});
+
+		app.controller('WorldController', function ($scope) {
+			//Controller Code Here
+			$scope.helloTo = {};  
+			$scope.helloTo.title = "World, AngularJS";  
+		});
+		
+	</script>  
+	<body ng-app = "myapp">
+		<div ng-controller = "TextController">
+			<h1>{{helloTo.title}}</h1>
+		</div>
+		<div ng-controller = "WorldController">
+			<h1>{{helloTo.title}}</h1>
+		</div>
+	</body>
+	
+</html>
