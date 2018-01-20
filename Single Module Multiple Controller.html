@@ -24,7 +24,14 @@
 		});
 		
 	</script>  
-	<body ng-app = "app">
+	<body ng-app = "app" style="background-color: aqua">
+        <div>
+            <h1><center>Single Module Multiple Controllers</center></h1>
+            <p>Modules are used to group related pieces of functionality together to make it easy to take that and re-use it in another application.</p>
+            <p>You can have multiple controllers, but you cannot have multiple ng-app directives on the same page. This means you should only have a single ng-app directive in your html that points to a single module that will be used in your application.</p>
+        </div>
+        <hr/>
+        <hr/>
 		<div ng-controller = "HelloController">
 			<h1>{{helloTo.title}}</h1>
 		</div>
