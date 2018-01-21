@@ -1,0 +1,44 @@
+<!--Filter – A filter formats the value of an expression to display to the user.-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+            p{
+                display:inline;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script>
+            //Angular Code <Controller part>
+            var app = angular.module('app',[]);
+            app.controller('FilterControlller',function ($scope) {
+                $scope.subject = {A:'Angular', B:'Bootstrap', C:'CSS'}
+            });
+        </script>
+    </head>
+    <body ng-app = 'app'>
+        <div>
+            <h1><center>Use of filter</center></h1>
+            <p>A filter formats the value of an expression to display to the user.</p>
+        </div>
+        <hr/>
+        <hr/>
+        <div ng-controller="FilterControlller">
+            <!-- view part-->
+            Enter the string: <input type="text" ng-model="stringValue">
+            <p>{{stringValue | lowercase}}</p>
+            <p>{{stringValue | uppercase}}</p>
+            <br/>
+            Enter the number: <input type="number" ng-model="numberValue">
+            <p>{{numberValue | number:2}}</p> <!--number upto two decimal places-->
+            <br/>
+            Enter the rupee : <input type="number" ng-model="currencyValue">
+            <p>{{currencyValue | currency}}</p> <!--number upto two decimal places-->
+            <br/>
+            Result in JSON: <p>{{subject|json}}</p>
+        </div>
+</body>
+</html>
