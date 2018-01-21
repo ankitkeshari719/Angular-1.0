@@ -1,0 +1,51 @@
+<!--ng-app – This is used to initialize an Angular.JS application. When this directive in placed in an HTML page, it basically tells Angular that this HTML page is an angular.js application.-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script>
+            //Angular Code <Controller part>
+            var app = angular.module('app',[]);
+            app.controller('StudentController',function ($scope) {
+                $scope.student = {
+                    firstname : 'Ankit',
+                    lastname : 'Keshari',
+                    fullname : function () {
+                        return  $scope.student.firstname + " " +  $scope.student.lastname;
+                    }
+                };
+            });
+        </script>
+    </head>
+    <body ng-app = 'app'>
+        <div>
+            <h1><center>Use of Function</center></h1>
+            <p></p>
+        </div>
+        <hr/>
+        <hr/>
+        <div ng-controller="StudentController">
+            <!-- view part-->
+            <table>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>FullName</th>
+                </tr>
+                <tr>
+                    <td><input ng-model="student.firstname"></td>
+                    <td><input ng-model="student.lastname"></td>
+                    <td>{{student.fullname()}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
