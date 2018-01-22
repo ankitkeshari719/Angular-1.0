@@ -1,0 +1,82 @@
+<!--ng-app – This is used to initialize an Angular.JS application. When this directive in placed in an HTML page, it basically tells Angular that this HTML page is an angular.js application.-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script>
+            //Angular Code <Controller part>
+            var app = angular.module('app',[]);
+            app.controller('DateController',function ($scope) {
+                // Get Methods
+                $scope.MyDate = {};
+                $scope.MyDate.today = new Date();
+               /* The getDate() method returns the day of the month (from 1 to 31) for the specified date.*/
+                $scope.MyDate.date =  $scope.MyDate.today.getDate();
+                /*The getDay() method returns the day of the week (from 0 to 6) for the specified date.
+                Note: Sunday is 0, Monday is 1, and so on.*/
+                $scope.MyDate.day =  $scope.MyDate.today.getDay();
+                /* The getFullYear() method returns the year (four digits for dates between year 1000 and 9999) of the specified date.*/
+                $scope.MyDate.year =  $scope.MyDate.today.getFullYear();
+                /*The getMonth() method returns the month (from 0 to 11) for the specified date, according to local time.Note: January is 0, February is 1, and so on.*/
+                $scope.MyDate.month =  $scope.MyDate.today.getMonth();
+
+                //Set Methods
+               /* The setDate() method sets the day of the month to the date object.*/
+                $scope.MyDate.today1 = new Date();
+                $scope.MyDate.today1.setDate(15);
+                /*The setFullYear() method sets the year (four digits for dates between year 1000 and 9999) of the date object.This method can also be used to set the month and day of month. Syntax: Date.setFullYear(year, month, day)*/
+                $scope.MyDate.today2 = new Date();
+                $scope.MyDate.today2.setFullYear(2020);
+
+                $scope.MyDate.today3 = new Date();
+                $scope.MyDate.today3.setFullYear(2020, 10, 3);
+
+                $scope.MyDate.today4 = new Date();
+                $scope.MyDate.today4.setFullYear($scope.MyDate.today4.getFullYear(), $scope.MyDate.today4.getMonth() - 6);
+
+                $scope.MyDate.today5 = new Date();
+                $scope.MyDate.today5.setFullYear($scope.MyDate.today5.getFullYear() + 1, $scope.MyDate.today5.getMonth() + 1, $scope.MyDate.today5.getDate()+1);
+
+                //The toString() method converts a Date object to a string.
+                $scope.MyDate.today6 = new Date().toString();
+
+                /*The toJSON() method converts a Date object into a string, formatted as a JSON date.*/
+                $scope.MyDate.today7 = new Date().toJSON();
+               /* The toDateString() method converts the date (not the time) of a Date object into a readable string.*/
+                $scope.MyDate.today8 = new Date().toDateString();
+
+            });
+        </script>
+    </head>
+    <body ng-app = 'app'>
+        <div>
+            <h1><center>Use of Date</center></h1>
+            <p></p>
+        </div>
+        <hr/>
+        <hr/>
+        <div ng-controller="DateController">
+            <!-- view part-->
+            <p><b><u>Get date:</u></b></p>
+            <p><b>Today: {{MyDate.today}}</b></p>
+            <p><b>Date: {{MyDate.date}}</b></p>
+            <p><b>Day: {{MyDate.day}}</b></p>
+            <p><b>Month: {{MyDate.month}}</b></p>
+            <p><b>Year: {{MyDate.year}}</b></p>
+            <p><b><u>Set date:</u></b></p>
+            <p><b>Set today date to 15: {{MyDate.today1}}</b></p>
+            <p><b>Set year to 2020: {{MyDate.today2}}</b></p>
+            <p><b>Set year to 3 nov 2020: {{MyDate.today3}}</b></p>
+            <p><b>Six month ago: {{MyDate.today4}}</b></p>
+            <p><b>+1 {year,month,date} onward: {{MyDate.today5}}</b></p>
+            <p><b>Date object to a string: {{MyDate.today6}}</b></p>
+            <p><b>Date object to a JSON: {{MyDate.today7}}</b></p>
+            <p><b>Date object to a toDateString: {{MyDate.today8}}</b></p>
+        </div>
+    </body>
+</html>
