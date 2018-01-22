@@ -1,10 +1,45 @@
+<!--ng-change – TThe ng-change directive tells AngularJS what to do when the value of an HTML element changes.
+
+The ng-change directive requires a ng-model directive to be present.
+
+The ng-change directive from AngularJS will not override the element's original onchange event, both the ng-change expression and the original onchange event will be executed.
+
+The ng-change event is triggered at every change in the value. It will not wait until all changes are made, or when the input field loses focus.
+
+The ng-change event is only triggered if there is a actual change in the input value, and not if the change was made from a JavaScript.
+-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script>
+            //Angular Code <Controller part>
+            var app = angular.module('app',[]);
+            app.controller('NgChangeContoller',function ($scope) {
+               $scope.count = 0;
+               $scope.countType = function(){
+                   $scope.count++;
+               }
+            });
+        </script>
+    </head>
+    <body ng-app = 'app'>
+        <div>
+            <h1><center>Use of app</center></h1>
+            <p></p>
+        </div>
+        <hr/>
+        <hr/>
+        <div ng-controller="NgChangeContoller">
+            <!-- view part-->
+            <p>Type something in the input field:</p>
+            <input type="text" ng-change="countType()" ng-model="myValue">
+            <p>The input field has changed {{count}} times.</p>
+        </div>
+    </body>
 </html>
