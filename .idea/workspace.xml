@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0dc976c-84d7-4548-9782-42819aa92e03" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/$scope.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MVC in Angular JS.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MVC.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Two way binding.PNG" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/How_to_display_Html_code_on_a_webpage.PNG" afterPath="$PROJECT_DIR$/images/How_to_display_Html_code_on_a_webpage.PNG" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template.html" afterPath="$PROJECT_DIR$/template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NavBar_Example.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +17,7 @@
       <file leaf-file-name="template.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="0">
               <caret line="14" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="7" />
               <folding />
             </state>
@@ -38,31 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="funtionInAngular.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/funtionInAngular.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="date_Example.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/date_Example.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ng-bind_Example.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ng-bind_Example.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="63" lean-forward="false" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -98,10 +74,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="How_to_display_Html_code_on_a_webpage.PNG" pinned="false" current-in-tab="true">
+      <file leaf-file-name="How_to_display_Html_code_on_a_webpage.PNG" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/How_to_display_Html_code_on_a_webpage.PNG">
           <provider selected="true" editor-type-id="images">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavBar_Example.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NavBar_Example.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="15" column="64" lean-forward="true" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -150,6 +136,7 @@
         <option value="$PROJECT_DIR$/ng-change_Example.html" />
         <option value="$PROJECT_DIR$/Display_JSON_Example.html" />
         <option value="$PROJECT_DIR$/toggleMessage.html" />
+        <option value="$PROJECT_DIR$/NavBar_Example.html" />
       </list>
     </option>
   </component>
@@ -242,12 +229,12 @@
       <workItem from="1516419955394" duration="14159000" />
       <workItem from="1516451621316" duration="15278000" />
       <workItem from="1516671172846" duration="3292000" />
-      <workItem from="1516684049765" duration="905000" />
+      <workItem from="1516684049765" duration="3350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33634000" />
+    <option name="totallyTimeSpent" value="36079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -533,22 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/date_Example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ng-bind_Example.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="63" lean-forward="false" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -582,7 +553,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="0">
           <caret line="14" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="7" />
           <folding />
         </state>
@@ -607,6 +578,30 @@
     <entry file="file://$PROJECT_DIR$/images/How_to_display_Html_code_on_a_webpage.PNG">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ng-bind_Example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/date_Example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="47" lean-forward="false" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NavBar_Example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="64" lean-forward="true" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
