@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script>
+            //Angular Code <Controller part>
+            var app = angular.module('app',[]);
+            app.controller('ToggleController',function ($scope) {
+                $scope.message = true;
+                $scope.toggleMessage = function(){
+                    $scope.message =  !$scope.message;
+                }
+            });
+        </script>
+    </head>
+    <body ng-app = 'app'>
+        <div>
+            <h1><center>Toggle the message</center></h1>
+            <p></p>
+        </div>
+        <hr/>
+        <hr/>
+        <div ng-controller="ToggleController">
+            <!-- view part-->
+            <button ng-click = "toggleMessage()">Toggle Message</button>
+            <p ng-show = "message">Hello Angular!</p>
+        </div>
+    </body>
+</html>
