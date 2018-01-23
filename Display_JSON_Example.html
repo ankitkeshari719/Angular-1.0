@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body{
+                background-color: aqua
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            pre{
+                background-color: blue;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+        <script>
+            //Angular Code <Controller part>
+            var app = angular.module('app',[]);
+            app.controller('JsonController',function ($scope) {
+                $scope.smac = {};
+                $scope.smac.data = [
+                    {
+                        'price':1,
+                        'quantity':10
+                    },
+                    {
+                        'price':2,
+                        'quantity':20
+                    },
+                    {
+                        'price':3,
+                        'quantity':30
+                    }
+                ];
+            });
+        </script>
+    </head>
+    <body ng-app = 'app'>
+        <div>
+            <h1><center>Display Json</center></h1>
+            <p></p>
+        </div>
+        <hr/>
+        <hr/>
+        <div ng-controller="JsonController">
+            <!-- view part-->
+            <pre>{{smac.data | json}}</pre>
+            <table>
+                <tr>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                </tr>
+                <tr ng-repeat="data in smac.data">
+                    <td><span>{{data.price}}</span></td>
+                    <td><span>{{data.quantity}}</span></td>
+                    <td><span>{{data.price * data.quantity}}</span></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
