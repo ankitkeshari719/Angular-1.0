@@ -1,0 +1,15 @@
+{
+  "name": "ankit",
+  "description": "This is for beginn",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/ankitkeshari719/Angular-JS-1.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
